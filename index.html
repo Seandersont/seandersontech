@@ -6,22 +6,53 @@
     <meta name="viewport" content="witdth=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/w3.css">
   </head>
+  
+  <style>
 
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+  body, html {
+    height: 100%;
+    color: #fff;
+    line-height: 1.8;
+  }
+
+  /* Create a Parallax Effect */
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* First image (Logo. Full height) */
+  .bgimg-1 {
+    background-image: url('/photos/Elizabeth.jpg');
+    min-height: 100%;
+  }
+
+  .w3-wide {letter-spacing: 10px;}
+  .w3-hover-opacity {cursor: pointer;}
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+       background-attachment: scroll;
+       min-height: 400px;
+    }
+  }
+  </style>
+  
   <body>
-    <div class="w3-bar w3-orange">
-      <h1>Sean Anderson</h2>
-    </div>
-    <div class="w3-bar w3-lime">
+    <div class="w3-bar w3-lime w3-top">
       <a href="#" class="w3-bar-item w3-button w3-hover-red">About</a> 
       <a href="#" class="w3-bar-item w3-button w3-hover-red">History</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-red">Resume</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-red">Contact</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-red">Media</a>
     </div>
-    <div class="w3-display-container w3-content w3-wide" style="min-width:500px" id="elizabeth">
-      <img class="w3-image" src="/photos/Elizabeth.jpg" alt="Hi Beth!" width="100%">
-      <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-        <h1 class="w3-xxlarge">SEANDERSONTECH</h1>
+    <div class="bgimg-1 w3-display-container" id="elizabeth">
+      <div class="w3-display-bottomleft">
+        <h1 class="w3-xxlarge w3-text-white w3-black w3-container w3-padding w3-round w3-margin">SEANDERSONTECH</h1>
       </div>
     </div>
   </body>
